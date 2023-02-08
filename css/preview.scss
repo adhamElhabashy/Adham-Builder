@@ -1,0 +1,160 @@
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+.popup-content {
+	width: 100%;
+	min-height: 100vh;
+	position: relative;
+	background-color: #2d3642;
+	padding-bottom: 50px;
+	.container {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
+		.option {
+			background-color: white;
+			padding: 20px;
+			margin: 12px;
+			text-align: center;
+			h3 {
+				margin: 0 0 10px;
+			}
+			input,
+			textarea {
+				border: none;
+				background-color: #2d3642;
+				padding: 6px;
+				color: white;
+				&:focus {
+					outline: none;
+				}
+				&.unfinished {
+					border: 1px solid red !important;
+				}
+			}
+			span {
+				display: block;
+				font-size: 14px;
+				font-weight: bold;
+				color: #777;
+				margin-top: 3px;
+				&.im {
+					color: red;
+				}
+			}
+			.option-buttons {
+				display: grid;
+			}
+			button {
+				border: none;
+				padding: 6px 15px;
+				background-color: #2d3642;
+				color: white;
+				border-radius: 20px;
+				margin: 5px;
+				cursor: pointer;
+				opacity: 0.5;
+				&.active,
+				&:hover {
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	.adham-show {
+		border: none;
+		padding: 6px 15px;
+		border-radius: 20px;
+		cursor: pointer;
+		text-transform: uppercase;
+		position: absolute;
+		left: 60%;
+		transform: translateX(-50%);
+	}
+
+	.reset {
+		border: none;
+		padding: 6px 15px;
+		border-radius: 20px;
+		cursor: pointer;
+		text-transform: uppercase;
+		position: absolute;
+		left: 30%;
+	}
+}
+
+.popup {
+	position: fixed;
+	z-index: 10001;
+}
+.adham-overlay {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: black;
+	z-index: 1000;
+}
+.main-overlay {
+	position: fixed;
+	z-index: 10000;
+}
+.centering {
+	transform: translate(-50%, -50%);
+}
+.start-time,
+.onclick,
+.end-time,
+.onclick-to-end {
+	display: none;
+	&.show-option {
+		display: block;
+	}
+}
+.appear-class,
+.disappear-class {
+	font-size: 25px !important;
+	color: black !important;
+}
+.instruction-popup {
+	padding: 20px;
+	border-radius: 6px;
+	width: 200px;
+	height: 200px;
+	position: fixed;
+	bottom: -200px;
+	right: -200px;
+	color: white;
+	line-height: 1.6;
+	text-align: center;
+	background-color: #2d3642;
+	border: 1px solid white;
+	transition: 1s;
+	opacity: 0;
+	&.p-active {
+		bottom: 40px;
+		right: 40px;
+		opacity: 1;
+	}
+	.popup-text {
+		p {
+			padding: 5px;
+		}
+		button {
+			background-color: transparent;
+			border: none;
+			font-size: 21px;
+			margin-top: 10px;
+			color: white;
+			cursor: pointer;
+			text-transform: uppercase;
+		}
+	}
+}

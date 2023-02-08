@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./css/normalize.css" />
+		<link rel="stylesheet" href="./css/preview.css" />
+		<title>Adham Generator</title>
+	</head>
+	<body>
+		<div class="popup-content">
+			<div class="container">
+				<div class="start option">
+					<h3>Start New One</h3>
+					<div class="option-buttons">
+						<button class="option-button" data-start="start">Start</button>
+					</div>
+					<span class="im">Click To Start building</span>
+				</div>
+				<div class="element option">
+					<h3>What is the element</h3>
+					<div class="option-buttons">
+						<button class="option-button" data-ele="popup">Popup</button>
+						<button class="option-button" data-ele="header">Header</button>
+						<button class="option-button" data-ele="navigation">
+							Navigation
+						</button>
+						<button class="option-button" data-ele="others">others</button>
+					</div>
+					<span>what is the type of element you want to build</span>
+				</div>
+				<div class="width option">
+					<h3>Width</h3>
+					<input
+						type="text"
+						class="number e-option direct-rules"
+						id="width"
+						data-property="width"
+						value="200px"
+					/>
+					<span>You can set it in px or % "400px" or "60%"</span>
+				</div>
+				<div class="height option">
+					<h3>Height</h3>
+					<input
+						type="text"
+						class="number e-option direct-rules"
+						id="height"
+						data-property="height"
+						value="200px"
+					/>
+					<span>You can set it in px or % "400px" or "60%"</span>
+				</div>
+				<div class="transition option">
+					<h3>Transition</h3>
+					<input
+						type="text"
+						class="direct-rules"
+						id="transition"
+						data-property="transition"
+						value="0"
+					/>
+					<span
+						>The time that popup takes to appear or disappear in seconds,</span
+					><span> set it in seconds "3s","10s"</span>
+				</div>
+				<div class="background-color option">
+					<h3>Background Color</h3>
+					<input
+						type="color"
+						id="background-color"
+						class="direct-rules"
+						data-property="background-color"
+					/>
+				</div>
+				<div class="text-color option">
+					<h3>Text Color</h3>
+					<input
+						type="color"
+						class="direct-rules"
+						id="text-color"
+						data-property="color"
+					/>
+				</div>
+				<div class="overlay-opt option">
+					<h3>Overlay</h3>
+					<div class="option-buttons">
+						<button class="option-button" data-overlay="yes">Yes</button>
+						<button class="option-button" data-overlay="no">No</button>
+					</div>
+				</div>
+				<div class="opacity-level option">
+					<h3>Overlay Opacity Level</h3>
+					<input
+						type="text"
+						class="direct-rules"
+						id="opacity-level"
+						data-property="opacity"
+						value="0"
+					/>
+					<span>from 0 to 1, set it with l "0.4l, 0.7l, 0.9l"</span>
+				</div>
+				<div class="top option">
+					<h3>Top</h3>
+					<input
+						type="text"
+						class="number e-option"
+						id="top"
+						data-property="top"
+						value="50%"
+					/>
+					<span>You can set it in px or % "400px" or "60%"</span>
+				</div>
+				<div class="left option">
+					<h3>Left</h3>
+					<input
+						type="text"
+						class="number e-option"
+						id="left"
+						data-property="left"
+						value="50%"
+					/>
+					<span>You can set it in px or % "400px" or "60%"</span>
+				</div>
+				<div class="centering-opt option">
+					<h3>Center</h3>
+					<div class="option-buttons">
+						<button class="option-button" data-center="yes">Yes</button>
+						<button class="option-button" data-center="no">No</button>
+					</div>
+					<span>To center the element you need to set top and left 50%</span>
+				</div>
+
+				<div class="appear-reason option">
+					<h3>Appear Reason</h3>
+					<div class="option-buttons">
+						<button class="option-button" data-appear="start-time">
+							Start Time
+						</button>
+						<button class="option-button" data-appear="onclick">
+							On Click
+						</button>
+						<button class="option-button" data-appear="static">Static</button>
+					</div>
+					<span>The Reason to make the popup appear</span>
+				</div>
+
+				<div class="start-time option">
+					<h3>Time To Start The Popup</h3>
+					<input type="number" id="show-the-popup" />
+					<span class="im">When popup appears in seconds</span>
+				</div>
+				<div class="onclick option">
+					<h3>Appear Classes</h3>
+					<span class="appear-class">adham-btn adham-show</span>
+					<span
+						>Add The Classes To The Element That Makes The Popup Appear</span
+					>
+				</div>
+				<div class="appear-reason option">
+					<h3>Disappear Reason</h3>
+					<div class="option-buttons">
+						<button class="option-button" data-disappear="end-time">
+							End Time
+						</button>
+						<button class="option-button" data-disappear="onclick">
+							On Click
+						</button>
+					</div>
+					<span>The Reason to make the popup appear</span>
+				</div>
+				<div class="end-time option">
+					<h3>Time To End The Popup</h3>
+					<input type="number" id="hidden-the-popup" />
+					<span class="im">When popup disappear in seconds</span>
+				</div>
+				<div class="onclick-to-end option">
+					<h3>Disapear Classes</h3>
+					<span class="disappear-class">adham-btn adham-hidden</span>
+					<span
+						>Add The Classes To The Element That Makes The Popup disappear</span
+					>
+				</div>
+				<div class="effect option">
+					<h3>Show Effects</h3>
+					<div class="option-buttons">
+						<button class="option-button" data-show="fade-in">Fade IN</button>
+						<button class="option-button" data-show="slide-down">
+							Slide Down
+						</button>
+						<button class="option-button" data-show="slide-up">Slide Up</button>
+						<button class="option-button" data-show="slide-left">
+							Slide Left
+						</button>
+						<button class="option-button" data-show="slide-right">
+							Slide Right
+						</button>
+					</div>
+					<span>Default Is Fade In</span>
+					<span>Static elements don't have show effect</span>
+				</div>
+			</div>
+			<button class="reset">Reset</button>
+			<button class="adham-show" id="show">Show Popup</button>
+		</div>
+		<div class="instruction-popup">
+			<div class="popup-text">
+				<p>
+					This live preview copy doesn't have all features. to generate the
+					code, buy the full copy
+				</p>
+				<button>Close</button>
+			</div>
+		</div>
+		<script src="./js/preview.js"></script>
+	</body>
+</html>
